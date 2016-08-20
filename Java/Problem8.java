@@ -1,12 +1,13 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Problem8 {
+    
 
     public static void main(String[] args) {
-        problem8();
+        problem8();//less than 1 second
     }
-
-    public static void problem8() {
+    
+    public static void problem8(){
         String s =  "73167176531330624919225119674426574742355349194934" +
                     "96983520312774506326239578318016984801869478851843" +
                     "85861560789112949495459501737958331952853208805511" +
@@ -29,22 +30,21 @@ public class Problem8 {
                     "71636269561882670428252483600823257530420752963450";
         
         String[] ch = s.split("");
-        int[] list = new int [1000];
-        int maxvalue = 0;
+        long[] list = new long [1000];
+        long maxvalue = 0;
         for (int i = 0; i < 1000; i++){
             list[i] = Integer.valueOf(ch[i]);
         
     }
         for (int i = 0; i < list.length-14; i++){
-            int x = list[i] * list[i+1] * list[i+2] * list[i+3] * list[i+4] * list[i+5] * list[i+6] * list[i+7] * list[i+8] * list[i+9] * list[i+10] * list[i+11] * list[i+12];
+            long x = list[i] * list[i+1] * list[i+2] * list[i+3] * list[i+4] * list[i+5] * list[i+6] * list[i+7] * list[i+8] * list[i+9] * list[i+10] * list[i+11] * list[i+12];
             if (x > maxvalue)
                 maxvalue = x;
         }
         System.out.println(maxvalue);
         System.out.println(list[999]);
-
-            
-            
-
-}
+        
+    }
+    }
+    
 }
